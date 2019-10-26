@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yMp-VA-xkb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Items List-->
+        <scene sceneID="fwu-nq-WsW">
+            <objects>
+                <tableViewController id="i8c-N1-8Cq" customClass="ItemListViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pch-oA-7Oq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="3eq-Ev-aOo" customClass="ItemListTableViewCell" customModule="ShoppingList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3eq-Ev-aOo" id="TKF-yp-ygn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5z-HT-l1t">
+                                            <rect key="frame" x="10.5" y="3" width="393" height="54.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-gw-jVY">
+                                                    <rect key="frame" x="373.5" y="0.0" width="19.5" height="54.5"/>
+                                                    <color key="backgroundColor" red="0.45882352941176469" green="0.44705882352941173" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pressedStoreButton:" destination="3eq-Ev-aOo" eventType="touchUpInside" id="q0o-Jk-odp"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hE-4Y-TWQ">
+                                                    <rect key="frame" x="10" y="0.0" width="39" height="54.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="○">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pressedCheckMark:" destination="3eq-Ev-aOo" eventType="touchUpInside" id="FKW-qf-10B"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Qg-YKv">
+                                                    <rect key="frame" x="59" y="0.0" width="314.5" height="54.5"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Xpy-gw-jVY" secondAttribute="bottom" id="3rx-QX-uTl"/>
+                                                <constraint firstAttribute="bottom" secondItem="diG-Qg-YKv" secondAttribute="bottom" id="3t7-c2-bkz"/>
+                                                <constraint firstAttribute="bottom" secondItem="6hE-4Y-TWQ" secondAttribute="bottom" id="459-nE-qBN"/>
+                                                <constraint firstItem="6hE-4Y-TWQ" firstAttribute="leading" secondItem="J5z-HT-l1t" secondAttribute="leading" constant="10" id="EN1-5S-FUs"/>
+                                                <constraint firstItem="Xpy-gw-jVY" firstAttribute="height" secondItem="J5z-HT-l1t" secondAttribute="height" id="EN8-8k-VDD"/>
+                                                <constraint firstItem="Xpy-gw-jVY" firstAttribute="leading" secondItem="diG-Qg-YKv" secondAttribute="trailing" id="R76-6h-f9i"/>
+                                                <constraint firstItem="Xpy-gw-jVY" firstAttribute="width" secondItem="J5z-HT-l1t" secondAttribute="width" multiplier="0.05" identifier="StoreButtonWidth" id="TDg-GS-W1o"/>
+                                                <constraint firstItem="6hE-4Y-TWQ" firstAttribute="top" secondItem="J5z-HT-l1t" secondAttribute="top" id="h4X-gz-q41"/>
+                                                <constraint firstItem="Xpy-gw-jVY" firstAttribute="top" secondItem="J5z-HT-l1t" secondAttribute="top" id="i75-La-O6Y"/>
+                                                <constraint firstItem="diG-Qg-YKv" firstAttribute="top" secondItem="J5z-HT-l1t" secondAttribute="top" id="kAH-EF-Q7U"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xpy-gw-jVY" secondAttribute="trailing" id="n2A-0s-Hcq"/>
+                                                <constraint firstItem="6hE-4Y-TWQ" firstAttribute="width" secondItem="J5z-HT-l1t" secondAttribute="width" multiplier="0.1" id="orB-tr-CN1"/>
+                                                <constraint firstItem="diG-Qg-YKv" firstAttribute="leading" secondItem="6hE-4Y-TWQ" secondAttribute="trailing" constant="10" id="qL7-Uv-Zxd"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="J5z-HT-l1t" firstAttribute="height" secondItem="TKF-yp-ygn" secondAttribute="height" multiplier="0.9" id="Ng4-rg-dCp"/>
+                                        <constraint firstItem="J5z-HT-l1t" firstAttribute="centerY" secondItem="TKF-yp-ygn" secondAttribute="centerY" id="Yjq-XG-G21"/>
+                                        <constraint firstItem="J5z-HT-l1t" firstAttribute="centerX" secondItem="TKF-yp-ygn" secondAttribute="centerX" id="bH4-YK-f0G"/>
+                                        <constraint firstItem="J5z-HT-l1t" firstAttribute="width" secondItem="TKF-yp-ygn" secondAttribute="width" multiplier="0.95" id="csY-oC-JVW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkMarkButton" destination="6hE-4Y-TWQ" id="uU2-Bp-2EC"/>
+                                    <outlet property="itemCellView" destination="J5z-HT-l1t" id="GoS-EE-jl5"/>
+                                    <outlet property="itemLabel" destination="diG-Qg-YKv" id="h8C-1l-EgI"/>
+                                    <outlet property="storeButton" destination="Xpy-gw-jVY" id="kQ2-pz-ch9"/>
+                                    <outlet property="storeButtonWidth" destination="TDg-GS-W1o" id="I9X-O1-NVd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="i8c-N1-8Cq" id="k5T-mQ-A3h"/>
+                            <outlet property="delegate" destination="i8c-N1-8Cq" id="HCh-hR-fCz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Items List" id="sCP-VJ-UQ1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="na8-qh-tyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318.84057971014494" y="-18.080357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EgG-JV-js9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yMp-VA-xkb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Irl-ie-psq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i8c-N1-8Cq" kind="relationship" relationship="rootViewController" id="TqP-01-zyn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhC-h5-ASe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1230.4347826086957" y="-18.080357142857142"/>
+        </scene>
+    </scenes>
+</document>
