@@ -24,7 +24,7 @@ class ItemViewModel {
         return itemDataModel.isCompleted
     }
     
-    public var store: Store {
+    public var store: StoreDataModel {
         return itemDataModel.storeInfomation
     }
 }

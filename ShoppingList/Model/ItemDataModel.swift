@@ -12,12 +12,13 @@ import Foundation
 
 struct ItemDataModel {
     var isCompleted: Bool
-    var storeInfomation: Store
+    var storeInfomation: StoreDataModel
     let itemTitle: String
 }
 
 // MARK: - Model Data
 
-let item1 = ItemDataModel(isCompleted: false, storeInfomation: Store(storeName: "Save on Foods"), itemTitle: "Buy bread")
-let item2 = ItemDataModel(isCompleted: false, storeInfomation: Store(storeName: "London Drugs"), itemTitle: "Buy Cereal")
-let item3 = ItemDataModel(isCompleted: false, storeInfomation: Store(storeName: "Safeway"), itemTitle: "Buy toilet paper")
+let item1 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "Save on foods"), itemTitle: "Buy bread")
+
+let item2 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "London Drugs"), itemTitle: "Buy Cereal")
+let item3 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "Safeway"), itemTitle: "Buy toilet paper")
