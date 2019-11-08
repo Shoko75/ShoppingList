@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct Store {
-    var storeName = "Save on foods"
+// MARK: - Model
+
+struct StoreDataModel {
+    var storeName: String
 }
+

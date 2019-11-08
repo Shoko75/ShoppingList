@@ -10,7 +10,6 @@ import UIKit
 
 class ItemListViewController: UITableViewController {
 
-    private var item = Item()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +18,13 @@ class ItemListViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+    
         
         
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return item.itemTitle.count
+        return itemViewModel.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,8 +37,8 @@ class ItemListViewController: UITableViewController {
         cell.storeButton.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
         
         // put the data
-        cell.itemLabel.text = item.itemTitle[indexPath.row]
-        cell.storeButton.setTitle(item.storeInfomation.storeName, for:.normal)
+        cell.itemLabel.text = itemViewModel[indexPath.row].itemName
+        cell.storeButton.setTitle(itemViewModel[indexPath.row].store.storeName, for:.normal)
         
         return cell
     }
