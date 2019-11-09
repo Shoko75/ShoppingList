@@ -18,6 +18,8 @@ class ItemListViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        
+        
     
         
         
