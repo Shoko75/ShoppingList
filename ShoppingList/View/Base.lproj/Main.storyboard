@@ -112,7 +112,7 @@
         <!--MainViewController-->
         <scene sceneID="7Op-ed-Ms6">
             <objects>
-                <viewController id="XRR-2I-yci" userLabel="MainViewController" sceneMemberID="viewController">
+                <viewController id="XRR-2I-yci" userLabel="MainViewController" customClass="MainViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQU-lw-vOB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +130,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gua-wG-22v">
                                                 <rect key="frame" x="0.0" y="0.0" width="179" height="77.333333333333329"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izu-b1-td3" customClass="RoundedButton" customModule="ShoppingList" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="77.333333333333329"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps-and-flags" translatesAutoresizingMaskIntoConstraints="NO" id="nOQ-O1-LjR">
                                                         <rect key="frame" x="5" y="5" width="35.666666666666664" height="38.666666666666664"/>
                                                     </imageView>
@@ -146,13 +153,17 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="nOQ-O1-LjR" firstAttribute="width" secondItem="Gua-wG-22v" secondAttribute="width" multiplier="0.2" id="47X-BJ-4PX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="izu-b1-td3" secondAttribute="bottom" id="4s0-ba-PH0"/>
                                                     <constraint firstAttribute="bottom" secondItem="Kep-IQ-R9K" secondAttribute="bottom" id="EnJ-KW-T4c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="izu-b1-td3" secondAttribute="trailing" id="HsR-YW-06a"/>
                                                     <constraint firstItem="Kep-IQ-R9K" firstAttribute="height" secondItem="Gua-wG-22v" secondAttribute="height" multiplier="0.4" id="Sr2-8M-gz9"/>
                                                     <constraint firstItem="Kep-IQ-R9K" firstAttribute="leading" secondItem="Gua-wG-22v" secondAttribute="leading" constant="5" id="TbY-6Q-o5b"/>
+                                                    <constraint firstItem="izu-b1-td3" firstAttribute="top" secondItem="Gua-wG-22v" secondAttribute="top" id="Tiw-o5-FAZ"/>
                                                     <constraint firstItem="nOQ-O1-LjR" firstAttribute="height" secondItem="Gua-wG-22v" secondAttribute="height" multiplier="0.5" id="Uim-TI-Zi9"/>
+                                                    <constraint firstItem="izu-b1-td3" firstAttribute="leading" secondItem="Gua-wG-22v" secondAttribute="leading" id="eTf-6G-vgG"/>
                                                     <constraint firstItem="koX-dK-dSJ" firstAttribute="top" secondItem="Gua-wG-22v" secondAttribute="top" constant="5" id="jeh-Bg-Qyv"/>
                                                     <constraint firstAttribute="trailing" secondItem="koX-dK-dSJ" secondAttribute="trailing" constant="10" id="nOH-u5-KgX"/>
                                                     <constraint firstItem="nOQ-O1-LjR" firstAttribute="top" secondItem="Gua-wG-22v" secondAttribute="top" constant="5" id="pwX-d7-VMC"/>
@@ -162,6 +173,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxk-zp-AJC">
                                                 <rect key="frame" x="194" y="0.0" width="178.66666666666663" height="77.333333333333329"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvd-b8-FA2" customClass="RoundedButton" customModule="ShoppingList" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="77.333333333333329"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-basket" translatesAutoresizingMaskIntoConstraints="NO" id="lpe-WO-P13">
                                                         <rect key="frame" x="5" y="5" width="35.666666666666664" height="38.666666666666664"/>
                                                     </imageView>
@@ -171,24 +189,28 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPc-Vl-EFa">
-                                                        <rect key="frame" x="5.0000000000000018" y="46.333333333333329" width="29.666666666666671" height="31"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPc-Vl-EFa">
+                                                        <rect key="frame" x="5" y="46.333333333333329" width="66.666666666666671" height="31"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="lpe-WO-P13" firstAttribute="leading" secondItem="Hxk-zp-AJC" secondAttribute="leading" constant="5" id="62t-1e-n9J"/>
                                                     <constraint firstItem="BP3-Pp-Oo5" firstAttribute="top" secondItem="Hxk-zp-AJC" secondAttribute="top" constant="5" id="BC4-4e-ngo"/>
                                                     <constraint firstItem="lpe-WO-P13" firstAttribute="top" secondItem="Hxk-zp-AJC" secondAttribute="top" constant="5" id="GJL-r5-Z82"/>
                                                     <constraint firstItem="lpe-WO-P13" firstAttribute="height" secondItem="Hxk-zp-AJC" secondAttribute="height" multiplier="0.5" id="IHf-Dv-VYz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Dvd-b8-FA2" secondAttribute="trailing" id="NCp-ox-pQ9"/>
+                                                    <constraint firstItem="Dvd-b8-FA2" firstAttribute="top" secondItem="Hxk-zp-AJC" secondAttribute="top" id="STo-cV-sbo"/>
                                                     <constraint firstItem="QPc-Vl-EFa" firstAttribute="leading" secondItem="Hxk-zp-AJC" secondAttribute="leading" constant="5" id="UAS-gX-XTH"/>
                                                     <constraint firstAttribute="trailing" secondItem="BP3-Pp-Oo5" secondAttribute="trailing" constant="10" id="X4W-cv-JJJ"/>
                                                     <constraint firstItem="QPc-Vl-EFa" firstAttribute="height" secondItem="Hxk-zp-AJC" secondAttribute="height" multiplier="0.4" id="dbL-gp-8tA"/>
                                                     <constraint firstAttribute="bottom" secondItem="QPc-Vl-EFa" secondAttribute="bottom" id="ees-wR-74u"/>
+                                                    <constraint firstItem="Dvd-b8-FA2" firstAttribute="leading" secondItem="Hxk-zp-AJC" secondAttribute="leading" id="phf-tc-vtU"/>
                                                     <constraint firstItem="lpe-WO-P13" firstAttribute="width" secondItem="Hxk-zp-AJC" secondAttribute="width" multiplier="0.2" id="qNY-V0-Don"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Dvd-b8-FA2" secondAttribute="bottom" id="vva-H9-4PD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -234,6 +256,10 @@
                         <viewLayoutGuide key="safeArea" id="7cQ-av-Khb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Smart Shopping List" id="EFD-aP-RXy"/>
+                    <connections>
+                        <outlet property="allButton" destination="Dvd-b8-FA2" id="4ZK-dt-Pfx"/>
+                        <outlet property="mapButton" destination="izu-b1-td3" id="12g-07-Sn1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFA-KM-zkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
