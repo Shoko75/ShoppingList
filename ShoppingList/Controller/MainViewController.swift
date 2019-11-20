@@ -16,10 +16,10 @@ struct CellData {
 
 class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var mapButton: RoundedButton!
     
+    @IBOutlet weak var mapRoundedButtonView: RoundedButton!
     
-    @IBOutlet weak var allButton: RoundedButton!
+    @IBOutlet weak var allRoundedButtonView: RoundedButton!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,13 +28,18 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         
+        let spaceView = UIView()
+        spaceView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tableView.tableFooterView = spaceView
+        
         tableViewData = [CellData(opened: false, title: "London Drugs", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]]), CellData(opened: false, title: "Save on Foods", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]]), CellData(opened: false, title: "Safeway", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]])]
         
-        mapButton.setButton()
-        allButton.setButton()
+        mapRoundedButtonView.setButton()
+        allRoundedButtonView.setButton()
         
     }
     

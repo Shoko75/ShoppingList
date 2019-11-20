@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundedButton: UIButton {
+class RoundedButton: UIView {
     
     func setButton() {
         self.layer.cornerRadius = 10
