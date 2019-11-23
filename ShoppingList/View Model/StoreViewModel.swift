@@ -20,3 +20,4 @@ class StoreViewModel {
         return storeDataModel.storeName
     }
 }
+
