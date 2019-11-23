@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bjP-fN-YFX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Store View Conroller-->
+        <scene sceneID="dUU-OD-mxC">
+            <objects>
+                <viewController id="bjP-fN-YFX" customClass="NewStoreViewConroller" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ard-eT-dDT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online-shop" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-tj-GO1">
+                                <rect key="frame" x="80" y="138" width="254" height="170.5"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sOy-Uj-0Yq">
+                                <rect key="frame" x="30" y="343.5" width="354" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XC0-jq-lGh" userLabel="StoreTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Kaq-29-IK7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-p2-Htb" userLabel="Add">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="40"/>
+                                        <color key="backgroundColor" red="0.2156862745" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="bjP-fN-YFX" eventType="touchUpInside" id="2F9-lp-KcM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUD-ov-ebd">
+                                <rect key="frame" x="351" y="76" width="43" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Done"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add some Stores!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-Uy-XgW" userLabel="Title">
+                                <rect key="frame" x="63" y="78" width="288" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EwJ-5B-uMz">
+                                <rect key="frame" x="30" y="413.5" width="354" height="348.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dSB-ks-wXI">
+                                    <size key="itemSize" width="69" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addedStoreCell" id="TLr-jc-Ka0" customClass="NewStoreCollectionViewCell" customModule="ShoppingList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="abO-Ss-FvK">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EH-w3-FRD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="50"/>
+                                                    <color key="backgroundColor" red="0.2156862745" green="0.47450980390000003" blue="1" alpha="0.75457512842465757" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5EH-w3-FRD" secondAttribute="trailing" id="9vH-Av-Rts"/>
+                                                <constraint firstAttribute="bottom" secondItem="5EH-w3-FRD" secondAttribute="bottom" id="Xh3-rw-Ize"/>
+                                                <constraint firstItem="5EH-w3-FRD" firstAttribute="leading" secondItem="abO-Ss-FvK" secondAttribute="leading" id="Ycc-uM-rrs"/>
+                                                <constraint firstItem="5EH-w3-FRD" firstAttribute="top" secondItem="abO-Ss-FvK" secondAttribute="top" id="qwO-ud-EuK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="69" height="50"/>
+                                        <connections>
+                                            <outlet property="label" destination="5EH-w3-FRD" id="NlO-9d-1Lh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ids-Uy-XgW" firstAttribute="top" secondItem="ENc-Rf-dxa" secondAttribute="top" constant="34" id="3Iy-fK-viU"/>
+                            <constraint firstItem="sOy-Uj-0Yq" firstAttribute="top" secondItem="JP6-tj-GO1" secondAttribute="bottom" constant="35" id="BBh-uZ-yuw"/>
+                            <constraint firstItem="xUD-ov-ebd" firstAttribute="leading" secondItem="Ids-Uy-XgW" secondAttribute="trailing" id="E8a-ey-Thn"/>
+                            <constraint firstItem="EwJ-5B-uMz" firstAttribute="top" secondItem="sOy-Uj-0Yq" secondAttribute="bottom" constant="30" id="Fje-de-TmH"/>
+                            <constraint firstItem="Ids-Uy-XgW" firstAttribute="centerY" secondItem="xUD-ov-ebd" secondAttribute="centerY" id="Ota-Ho-dco"/>
+                            <constraint firstItem="ENc-Rf-dxa" firstAttribute="trailing" secondItem="EwJ-5B-uMz" secondAttribute="trailing" constant="30" id="U8V-Z5-azL"/>
+                            <constraint firstItem="JP6-tj-GO1" firstAttribute="leading" secondItem="ENc-Rf-dxa" secondAttribute="leading" constant="80" id="VsK-Tq-CpL"/>
+                            <constraint firstItem="ENc-Rf-dxa" firstAttribute="bottom" secondItem="EwJ-5B-uMz" secondAttribute="bottom" constant="100" id="asY-mB-zPK"/>
+                            <constraint firstAttribute="trailing" secondItem="sOy-Uj-0Yq" secondAttribute="trailing" constant="30" id="edM-DS-6gP"/>
+                            <constraint firstItem="Ids-Uy-XgW" firstAttribute="centerX" secondItem="JP6-tj-GO1" secondAttribute="centerX" id="fzW-BY-tcZ"/>
+                            <constraint firstItem="ENc-Rf-dxa" firstAttribute="trailing" secondItem="JP6-tj-GO1" secondAttribute="trailing" constant="80" id="g02-0D-6GC"/>
+                            <constraint firstItem="EwJ-5B-uMz" firstAttribute="leading" secondItem="ENc-Rf-dxa" secondAttribute="leading" constant="30" id="jNX-d8-BfH"/>
+                            <constraint firstItem="JP6-tj-GO1" firstAttribute="top" secondItem="Ids-Uy-XgW" secondAttribute="bottom" constant="30" id="ma4-yX-juy"/>
+                            <constraint firstItem="Ids-Uy-XgW" firstAttribute="leading" secondItem="ENc-Rf-dxa" secondAttribute="leading" constant="63" id="q9I-z0-Arw"/>
+                            <constraint firstItem="sOy-Uj-0Yq" firstAttribute="leading" secondItem="ENc-Rf-dxa" secondAttribute="leading" constant="30" id="rIu-q5-N1f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ENc-Rf-dxa"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="EwJ-5B-uMz" id="JqP-Ig-rqC"/>
+                        <outlet property="textField" destination="XC0-jq-lGh" id="mGk-kd-fRX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qch-Mc-2em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594.20289855072474" y="422.54464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="online-shop" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
