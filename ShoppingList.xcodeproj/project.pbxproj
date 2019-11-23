@@ -31,6 +31,8 @@
 		169F0B162371401900E7285C /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 169F0B032371401900E7285C /* RobotoCondensed-Italic.ttf */; };
 		169F0B172371401900E7285C /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 169F0B042371401900E7285C /* RobotoCondensed-Regular.ttf */; };
 		16D6F2F4237E78920046CA9B /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D6F2F3237E78920046CA9B /* TestController.swift */; };
+		2F419FAA2388E56100FB2773 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F419FA82388E56100FB2773 /* Navigation.storyboard */; };
+		2F419FAC2388E5AC00FB2773 /* AllItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F419FAB2388E5AC00FB2773 /* AllItems.storyboard */; };
 		2F9EC65C2363E0D500BBF921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC65B2363E0D500BBF921 /* AppDelegate.swift */; };
 		2F9EC65E2363E0D500BBF921 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC65D2363E0D500BBF921 /* SceneDelegate.swift */; };
 		2F9EC6602363E0D500BBF921 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC65F2363E0D500BBF921 /* ItemListViewController.swift */; };
@@ -68,6 +70,8 @@
 		169F0B032371401900E7285C /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		169F0B042371401900E7285C /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		16D6F2F3237E78920046CA9B /* TestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		2F419FA92388E56100FB2773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Navigation.storyboard; sourceTree = "<group>"; };
+		2F419FAB2388E5AC00FB2773 /* AllItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllItems.storyboard; sourceTree = SOURCE_ROOT; };
 		2F9EC6582363E0D500BBF921 /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9EC65B2363E0D500BBF921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9EC65D2363E0D500BBF921 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		2F9EC69B2363F45200BBF921 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F419FAB2388E5AC00FB2773 /* AllItems.storyboard */,
+				2F419FA82388E56100FB2773 /* Navigation.storyboard */,
 				2F9EC6612363E0D500BBF921 /* Main.storyboard */,
 				16759B4723768915002C541D /* RoundedButton.swift */,
 				2F9EC6662363E0D700BBF921 /* LaunchScreen.storyboard */,
@@ -285,6 +291,7 @@
 				169F0B152371401900E7285C /* Roboto-LightItalic.ttf in Resources */,
 				169F0B132371401900E7285C /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				169F0B0E2371401900E7285C /* Roboto-MediumItalic.ttf in Resources */,
+				2F419FAC2388E5AC00FB2773 /* AllItems.storyboard in Resources */,
 				169F0B052371401900E7285C /* Roboto-Thin.ttf in Resources */,
 				169F0B0C2371401900E7285C /* Roboto-Light.ttf in Resources */,
 				2F9EC6682363E0D700BBF921 /* LaunchScreen.storyboard in Resources */,
@@ -293,6 +300,7 @@
 				2F9EC6652363E0D700BBF921 /* Assets.xcassets in Resources */,
 				169F0B082371401900E7285C /* Roboto-Italic.ttf in Resources */,
 				169F0B092371401900E7285C /* Apache License.txt in Resources */,
+				2F419FAA2388E56100FB2773 /* Navigation.storyboard in Resources */,
 				2F9EC6632363E0D500BBF921 /* Main.storyboard in Resources */,
 				169F0B172371401900E7285C /* RobotoCondensed-Regular.ttf in Resources */,
 				169F0B0D2371401900E7285C /* RobotoCondensed-Light.ttf in Resources */,
@@ -371,6 +379,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2F419FA82388E56100FB2773 /* Navigation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F419FA92388E56100FB2773 /* Base */,
+			);
+			name = Navigation.storyboard;
+			sourceTree = "<group>";
+		};
 		2F9EC6612363E0D500BBF921 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
