@@ -19,5 +19,5 @@ class StoreViewModel {
     public var storeName: String {
         return storeDataModel.storeName
     }
+    
 }
-
