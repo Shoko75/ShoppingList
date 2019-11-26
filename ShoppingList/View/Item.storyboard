@@ -25,11 +25,17 @@
                                 <rect key="frame" x="20" y="64" width="53" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="pressedCancel:" destination="YNR-qw-zjr" eventType="touchUpInside" id="T5A-BK-jaI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nB-al-lSp">
                                 <rect key="frame" x="353" y="64" width="41" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="pressedDone:" destination="YNR-qw-zjr" eventType="touchUpInside" id="a1x-OB-CtJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-gs-e3f">
                                 <rect key="frame" x="20" y="117" width="374" height="745"/>
@@ -103,6 +109,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YQj-Hy-JtE"/>
                     </view>
+                    <connections>
+                        <outlet property="itemName" destination="fib-PV-epg" id="3sh-xS-F0I"/>
+                        <outlet property="notificationSwitch" destination="kck-b9-gzM" id="4sI-zi-3mW"/>
+                        <outlet property="storePicker" destination="3uf-6F-PQO" id="lSL-Ik-hTc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oL-xb-HU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
