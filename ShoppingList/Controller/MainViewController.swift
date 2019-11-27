@@ -10,8 +10,7 @@ import UIKit
 
 struct CellData {
     var opened = Bool()
-    var title = String()
-    var sectionData = [ItemViewModel]()
+    var itemData: [ItemViewModel]
 }
 
 class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
@@ -23,7 +22,8 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
-    var tableViewData = [CellData]()
+    var dataDict = [String:CellData]()
+    //    var tableViewData = CellData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,13 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
         spaceView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.tableFooterView = spaceView
         
-        tableViewData = [CellData(opened: false, title: "London Drugs", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]]), CellData(opened: false, title: "Save on Foods", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]]), CellData(opened: false, title: "Safeway", sectionData: [itemViewModel[0], itemViewModel[1], itemViewModel[2]])]
+        
+        for item in itemViewModel {
+            dataDict[item.store.storeName] = CellData(opened: false, itemData: [ItemViewModel]())
+            dataDict[item.store.storeName]!.itemData.append(item)
+            print(dataDict)
+        }
+        
         
         mapRoundedButtonView.setButton()
         allRoundedButtonView.setButton()
@@ -44,46 +50,54 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewData.count
+        let keys = Array(dataDict.keys)
+        return keys.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableViewData[section].opened == true {
-            return tableViewData[section].sectionData.count + 1
+        let key = Array(dataDict.keys)[section]
+        
+        if dataDict[key]?.opened == true {
+            return dataDict[key]!.itemData.count + 1
         } else {
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let key = Array(dataDict.keys)[indexPath.section]
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainPageItemCell") else {return UITableViewCell()}
             
-            cell.textLabel?.text = tableViewData[indexPath.section].title
+            cell.textLabel?.text = key
             
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainPageItemCell") else {return UITableViewCell()}
-                       
-            cell.textLabel?.text = tableViewData[indexPath.section].sectionData[indexPath.row - 1].itemName
+            
+            cell.textLabel?.text = dataDict[key]?.itemData[indexPath.row - 1].itemName
             
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let key = Array(dataDict.keys)[indexPath.section]
         if indexPath.row == 0 {
-            if tableViewData[indexPath.section].opened == true {
-                tableViewData[indexPath.section].opened = false
+            if dataDict[key]!.opened == true {
+                dataDict[key]!.opened = false
                 
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             } else {
-                tableViewData[indexPath.section].opened = true
+                dataDict[key]?.opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
+                
             }
+            
         }
+        
     }
     
 }

@@ -44,6 +44,7 @@ class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UIColle
         } else {
             let newStore = StoreViewModel(storeDataModel: StoreDataModel(storeName: textField.text!))
             stores.append(newStore)
+            storeViewModel.append(newStore)
             collectionView.reloadData()
         }
     }
