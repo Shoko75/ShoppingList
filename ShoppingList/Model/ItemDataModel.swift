@@ -27,3 +27,5 @@ struct CellData {
     var opened = Bool()
     var itemData: [ItemViewModel]
 }
+
+

@@ -47,6 +47,7 @@
 		2F9EC6702363EA6100BBF921 /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC66F2363EA6100BBF921 /* ItemListTableViewCell.swift */; };
 		2F9EC69E2363F48E00BBF921 /* ItemDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC69D2363F48E00BBF921 /* ItemDataModel.swift */; };
 		2F9EC6A02363F52300BBF921 /* StoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9EC69F2363F52300BBF921 /* StoreDataModel.swift */; };
+		2FF4CBA4238F79910033F061 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4CBA3238F79910033F061 /* GoogleService-Info.plist */; };
 		FE67CFDBC7E513D975761FD9 /* Pods_ShoppingList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67336E1CA57BCE4FA470FD6B /* Pods_ShoppingList.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		2F9EC66F2363EA6100BBF921 /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		2F9EC69D2363F48E00BBF921 /* ItemDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDataModel.swift; sourceTree = "<group>"; };
 		2F9EC69F2363F52300BBF921 /* StoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataModel.swift; sourceTree = "<group>"; };
+		2FF4CBA3238F79910033F061 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67336E1CA57BCE4FA470FD6B /* Pods_ShoppingList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2D5604367AB632B8697132 /* Pods-ShoppingList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingList/Pods-ShoppingList.debug.xcconfig"; sourceTree = "<group>"; };
 		F2FDA1D5B0B64CA3A10D03C3 /* Pods-ShoppingList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.release.xcconfig"; path = "Target Support Files/Pods-ShoppingList/Pods-ShoppingList.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				16687A4923693C3800A8F295 /* Supporting Files */,
 				2F9EC6642363E0D700BBF921 /* Assets.xcassets */,
 				2F9EC6692363E0D700BBF921 /* Info.plist */,
+				2FF4CBA3238F79910033F061 /* GoogleService-Info.plist */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				169F0B0C2371401900E7285C /* Roboto-Light.ttf in Resources */,
 				2F419FAE2388E79700FB2773 /* Item.storyboard in Resources */,
 				2F9EC6682363E0D700BBF921 /* LaunchScreen.storyboard in Resources */,
+				2FF4CBA4238F79910033F061 /* GoogleService-Info.plist in Resources */,
 				169F0B062371401900E7285C /* Roboto-Bold.ttf in Resources */,
 				169F0B142371401900E7285C /* Roboto-BlackItalic.ttf in Resources */,
 				2F9EC6652363E0D700BBF921 /* Assets.xcassets in Resources */,

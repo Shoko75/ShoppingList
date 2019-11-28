@@ -12,6 +12,7 @@ class StoreViewModel {
     
     private let storeDataModel: StoreDataModel
     
+    
     init(storeDataModel: StoreDataModel) {
         self.storeDataModel = storeDataModel
     }
@@ -20,6 +21,12 @@ class StoreViewModel {
         return storeDataModel.storeName
     }
     
+    func toAnyObject() -> Any {
+      return [
+        "storeName": storeName
+      ]
+    }
+    
 }
 
-var storeViewModel = [StoreViewModel]()
+//var storeViewModel = [StoreViewModel]()

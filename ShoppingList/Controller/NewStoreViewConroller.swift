@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
@@ -16,6 +17,7 @@ class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UIColle
     
     
     var stores = [StoreViewModel]()
+    let storeRef = Database.database().reference(withPath: "store-list")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +46,17 @@ class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UIColle
         } else {
             let newStore = StoreViewModel(storeDataModel: StoreDataModel(storeName: textField.text!))
             stores.append(newStore)
-            storeViewModel.append(newStore)
+            //storeViewModel.append(newStore)
             textField.text = ""
             collectionView.reloadData()
         }
     }
     
+    @IBAction func pressedDone(_ sender: Any) {
+        
+        for store in stores {
+            self.storeRef.childByAutoId().setValue(store.toAnyObject())
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
