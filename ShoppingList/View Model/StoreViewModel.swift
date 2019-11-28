@@ -21,3 +21,5 @@ class StoreViewModel {
     }
     
 }
+
+var storeViewModel = [StoreViewModel]()

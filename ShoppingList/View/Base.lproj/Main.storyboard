@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XRR-2I-yci">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XRR-2I-yci">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +28,20 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyl-uo-fke">
                                         <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="8.3333333333333339"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-bA-MWh">
+                                                <rect key="frame" x="37" y="-11" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="x3V-k9-8W6" kind="show" id="dee-KP-68H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cBN-Do-SSW">
-                                        <rect key="frame" x="0.0" y="18.333333333333343" width="393.33333333333331" height="81.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="18.333333333333336" width="393.33333333333331" height="81.666666666666657"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gua-wG-22v" customClass="RoundedButton" customModule="ShoppingList" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="81.666666666666671"/>
@@ -126,13 +136,13 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-kt-ZkY">
-                                        <rect key="frame" x="0.0" y="144.66666666666663" width="393.33333333333331" height="40.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="144.66666666666666" width="393.33333333333331" height="40.666666666666657"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ydU-YR-Vmo">
-                                        <rect key="frame" x="0.0" y="195.33333333333348" width="393.33333333333331" height="589"/>
+                                        <rect key="frame" x="0.0" y="195.33333333333337" width="393.33333333333331" height="589"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -149,7 +159,7 @@
                                         </prototypes>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ag-Dz-rFU">
-                                        <rect key="frame" x="0.0" y="794.33333333333303" width="393.33333333333331" height="23.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="794.33333333333337" width="393.33333333333331" height="23.666666666666629"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYW-AB-fz5">
                                                 <rect key="frame" x="268.33333333333337" y="-4.6666666666667425" width="115" height="33"/>
@@ -196,6 +206,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFA-KM-zkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="-18.080357142857142"/>
+        </scene>
+        <!--NewStore-->
+        <scene sceneID="Ebe-sP-doB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewStore" referencedIdentifier="NewStore" id="x3V-k9-8W6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WA1-2x-J5h"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fa-ex-ibE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="-173"/>
         </scene>
         <!--Item-->
         <scene sceneID="36i-aH-Hft">
