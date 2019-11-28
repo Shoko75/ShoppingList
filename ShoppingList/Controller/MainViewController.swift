@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+import Firebase
 
 class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
     
@@ -20,7 +19,7 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var dataDict = [String:CellData]()
-    //    var tableViewData = CellData()
+    let itemRef = Database.database().reference(withPath: "item-list")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,26 +28,35 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Layout
         let spaceView = UIView()
         spaceView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.tableFooterView = spaceView
-        
-    
-        
-        for item in itemViewModel {
-            
-            if dataDict[item.store.storeName] != nil {
-                dataDict[item.store.storeName]!.itemData.append(item)
-            } else {
-                dataDict[item.store.storeName] = CellData(opened: false, itemData: [item])
-            }
-        }
-        
-        
-        
         mapRoundedButtonView.setButton()
         allRoundedButtonView.setButton()
         
+        // Data
+        retrievingData()
+        
+    }
+    
+    func retrievingData() {
+        
+        itemRef.observe(.value, with: { snapshot in
+            self.dataDict.removeAll()
+            if let itemData = snapshot.value as? NSDictionary {
+                for (_,item) in itemData {
+                    let data = item as! [String: Any]
+                    let storeName = data["storeInfomation"] as! String
+                    if self.dataDict[storeName] != nil {
+                        self.dataDict[storeName]!.itemData.append(ItemViewModel(itemDataModel: ItemDataModel(isCompleted: data["isCompleted"] as! Bool, storeInfomation: StoreDataModel(storeName: data["storeInfomation"] as! String) , itemTitle: data["itemTitle"] as! String)))
+                    } else {
+                        self.dataDict[storeName] = CellData(opened: false, itemData: [ItemViewModel(itemDataModel: ItemDataModel(isCompleted: data["isCompleted"] as! Bool, storeInfomation: StoreDataModel(storeName: data["storeInfomation"] as! String) , itemTitle: data["itemTitle"] as! String))])
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

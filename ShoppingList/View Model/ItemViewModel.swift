@@ -27,8 +27,16 @@ class ItemViewModel {
     public var store: StoreDataModel {
         return itemDataModel.storeInfomation
     }
+    
+    func toAnyObject() -> Any {
+      return [
+        "isCompleted": isCompleted,
+        "storeInfomation": store.storeName,
+        "itemTitle": itemName
+      ]
+    }
 }
 
-var itemViewModel: [ItemViewModel] = [ItemViewModel(itemDataModel: item1), ItemViewModel(itemDataModel: item2), ItemViewModel(itemDataModel: item3)]
+//var itemViewModel: [ItemViewModel] = [ItemViewModel(itemDataModel: item1), ItemViewModel(itemDataModel: item2), ItemViewModel(itemDataModel: item3)]
 
 

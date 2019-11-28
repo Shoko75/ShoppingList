@@ -8,5 +8,6 @@ target 'ShoppingList' do
   # Pods for ShoppingList
 	
 pod 'ExpandableCell', '~> 1.3'
-
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
 end
