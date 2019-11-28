@@ -10,7 +10,7 @@ import UIKit
 
 class ItemViewController: UIViewController {
     
-    var store = ["StoreA","StoreB","StoreC","StoreD","StoreE"]
+    var store = storeViewModel
 
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var storePicker: UIPickerView!
@@ -54,7 +54,7 @@ extension ItemViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: storePicker.frame.size.width, height: 50))
-        label.text = store[row]
+        label.text = store[row].storeName
         label.textAlignment = .center
         label.font = UIFont(name: "Roboto", size: 24)
         return label

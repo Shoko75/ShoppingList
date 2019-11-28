@@ -19,10 +19,6 @@ class ItemListViewController: UITableViewController {
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         
-        
-    
-        
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

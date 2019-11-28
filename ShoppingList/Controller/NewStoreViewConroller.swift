@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -45,6 +45,7 @@ class NewStoreViewConroller: UIViewController, UICollectionViewDelegate, UIColle
             let newStore = StoreViewModel(storeDataModel: StoreDataModel(storeName: textField.text!))
             stores.append(newStore)
             storeViewModel.append(newStore)
+            textField.text = ""
             collectionView.reloadData()
         }
     }

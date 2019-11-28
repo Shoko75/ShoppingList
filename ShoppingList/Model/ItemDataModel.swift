@@ -21,4 +21,9 @@ struct ItemDataModel {
 let item1 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "Save on foods"), itemTitle: "Buy bread")
 
 let item2 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "London Drugs"), itemTitle: "Buy Cereal")
-let item3 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "Safeway"), itemTitle: "Buy toilet paper")
+let item3 = ItemDataModel(isCompleted: false, storeInfomation: StoreDataModel(storeName: "Save on foods"), itemTitle: "Buy toilet paper")
+
+struct CellData {
+    var opened = Bool()
+    var itemData: [ItemViewModel]
+}

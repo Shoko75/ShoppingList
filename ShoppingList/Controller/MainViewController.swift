@@ -8,10 +8,7 @@
 
 import UIKit
 
-struct CellData {
-    var opened = Bool()
-    var itemData: [ItemViewModel]
-}
+
 
 class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
     
@@ -36,12 +33,17 @@ class MainViewController: UIViewController,  UITableViewDelegate, UITableViewDat
         spaceView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.tableFooterView = spaceView
         
+    
         
         for item in itemViewModel {
-            dataDict[item.store.storeName] = CellData(opened: false, itemData: [ItemViewModel]())
-            dataDict[item.store.storeName]!.itemData.append(item)
-            print(dataDict)
+            
+            if dataDict[item.store.storeName] != nil {
+                dataDict[item.store.storeName]!.itemData.append(item)
+            } else {
+                dataDict[item.store.storeName] = CellData(opened: false, itemData: [item])
+            }
         }
+        
         
         
         mapRoundedButtonView.setButton()

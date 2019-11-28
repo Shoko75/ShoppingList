@@ -11,7 +11,7 @@
         <!--New Store View Conroller-->
         <scene sceneID="dUU-OD-mxC">
             <objects>
-                <viewController id="bjP-fN-YFX" customClass="NewStoreViewConroller" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewStore" id="bjP-fN-YFX" customClass="NewStoreViewConroller" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ard-eT-dDT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,19 +19,16 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online-shop" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-tj-GO1">
                                 <rect key="frame" x="80" y="138" width="254" height="170.5"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sOy-Uj-0Yq">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sOy-Uj-0Yq">
                                 <rect key="frame" x="30" y="343.5" width="354" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Store Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XC0-jq-lGh" userLabel="StoreTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Kaq-29-IK7"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbS-p2-Htb" userLabel="Add">
-                                        <rect key="frame" x="254" y="0.0" width="100" height="40"/>
+                                        <rect key="frame" x="270" y="0.0" width="84" height="40"/>
                                         <color key="backgroundColor" red="0.2156862745" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Add">
@@ -42,11 +39,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="XC0-jq-lGh" firstAttribute="width" secondItem="sOy-Uj-0Yq" secondAttribute="width" multiplier="0.7" id="m25-RQ-RuD"/>
+                                    <constraint firstAttribute="height" constant="40" id="qQh-id-UuP"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUD-ov-ebd">
                                 <rect key="frame" x="351" y="76" width="43" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="1Mv-mB-ugp" kind="presentation" modalPresentationStyle="fullScreen" id="Qg7-60-RgK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add some Stores!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-Uy-XgW" userLabel="Title">
                                 <rect key="frame" x="63" y="78" width="288" height="30"/>
@@ -122,6 +126,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qch-Mc-2em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594.20289855072474" y="422.54464285714283"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="1yx-Nm-KJO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="1Mv-mB-ugp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tsz-nu-jdE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5h-eH-ULO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="444"/>
         </scene>
     </scenes>
     <resources>
